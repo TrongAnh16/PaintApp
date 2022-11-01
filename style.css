@@ -1,10 +1,10 @@
-
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 }
+
 body{
   display: flex;
   align-items: center;
@@ -13,6 +13,7 @@ body{
   background: #281b1b;
   background-image: url('https://img.freepik.com/premium-vector/paintbrushes-yellow-paint_1639-110.jpg?w=1060');
 }
+
 .container{
   display: flex;
   width: 100%;
@@ -20,56 +21,69 @@ body{
   padding: 10px;
   max-width: 1050px;
 }
+
 section{
   background: #fff;
   border-radius: 7px;
 }
+
 .tools-board{
   width: 210px;
   padding: 15px 22px 0;
   background-color: #ec6fbc;
 }
+
 .tools-board .row{
   margin-bottom: 20px;
 }
+
 .row .options{
   list-style: none;
   margin: 10px 0 0 5px;
 }
+
 .row .options .option{
   display: flex;
   cursor: pointer;
   align-items: center;
   margin-bottom: 10px;
 }
+
 .option:is(:hover, .active) img{
   filter: invert(17%) sepia(90%) saturate(3000%) hue-rotate(900deg) brightness(100%) contrast(100%);
 }
+
 .option :where(span, label){
   color: #5A6168;
   cursor: pointer;
   padding-left: 10px;
 }
+
 .option:is(:hover, .active) :where(span, label){
   color: #4A98F7;
 }
+
 .option #fill-color{
   cursor: pointer;
   height: 14px;
   width: 14px;
 }
+
 #fill-color:checked ~ label{
   color: #4A98F7;
 }
+
 .option #size-slider{
   width: 100%;
   height: 5px;
   margin-top: 10px;
 }
+
 .colors .options{
   display: flex;
   justify-content: space-between;
 }
+
 .colors .option{
   height: 20px;
   width: 20px;
@@ -77,21 +91,27 @@ section{
   margin-top: 3px;
   position: relative;
 }
+
 .colors .option:nth-child(1){
   background-color: rgb(10, 145, 207);
 }
+
 .colors .option:nth-child(2){
   background-color: #000;
 }
+
 .colors .option:nth-child(3){
   background-color: #E02020;
 }
+
 .colors .option:nth-child(4){
   background-color: #6DD400;
 }
+
 .colors .option:nth-child(5){
   background-color: #050ded;
 }
+
 .colors .option.selected::before{
   position: absolute;
   content: "";
@@ -104,13 +124,16 @@ section{
   border: 2px solid #fff;
   transform: translate(-50%, -50%);
 }
+
 .colors .option:first-child.selected::before{
   border-color: #ccc;
 }
+
 .option #color-picker{
   opacity: 0;
   cursor: pointer;
 }
+
 .buttons button{
   width: 100%;
   color: #fff;
@@ -123,19 +146,23 @@ section{
   border-radius: 4px;
   cursor: pointer;
 }
+
 .buttons .clear-canvas{
   color: #6C757D;
   border: 1px solid #6C757D;
   transition: all 0.3s ease;
 }
+
 .clear-canvas:hover{
   color: rgb(213, 56, 56);
   background: #6C757D;
 }
+
 .drawing-board{
   flex: 1;
   overflow: hidden;
 }
+
 .drawing-board canvas{
   width: 100%;
   height: 100%;
