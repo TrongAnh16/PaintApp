@@ -11,7 +11,7 @@ body{
   justify-content: center;
   min-height: 100vh;
   background: #281b1b;
-  background-image: url('https://img.freepik.com/premium-vector/paintbrushes-yellow-paint_1639-110.jpg?w=1060');
+  background-image: url('https://images4.alphacoders.com/616/616945.png');
 }
 
 .container{
@@ -28,9 +28,10 @@ section{
 }
 
 .tools-board{
+  opacity: 80%;
   width: 210px;
   padding: 15px 22px 0;
-  background-color: #ec6fbc;
+  background-color: #f6c98a;
 }
 
 .tools-board .row{
@@ -49,12 +50,8 @@ section{
   margin-bottom: 10px;
 }
 
-.option:is(:hover, .active) img{
-  filter: invert(17%) sepia(90%) saturate(3000%) hue-rotate(900deg) brightness(100%) contrast(100%);
-}
-
 .option :where(span, label){
-  color: #5A6168;
+  color: #000000;
   cursor: pointer;
   padding-left: 10px;
 }
@@ -69,7 +66,7 @@ section{
   width: 14px;
 }
 
-#fill-color:checked ~ label{
+#fill-color:checked {
   color: #4A98F7;
 }
 
@@ -93,23 +90,48 @@ section{
 }
 
 .colors .option:nth-child(1){
-  background-color: rgb(10, 145, 207);
+  background-color: rgb(0, 0, 0);
+}
+.colors .option:nth-child(1):hover{
+  transform: scale(1.3);
+  transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 .colors .option:nth-child(2){
-  background-color: #000;
+  background-color: rgb(24, 107, 223);
+}
+.colors .option:nth-child(2):hover{
+  transform: scale(1.3);
+  transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 .colors .option:nth-child(3){
   background-color: #E02020;
 }
+.colors .option:nth-child(3):hover{
+  transform: scale(1.3);
+  transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
 
 .colors .option:nth-child(4){
   background-color: #6DD400;
 }
+.colors .option:nth-child(4):hover{
+  transform: scale(1.3);
+  transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
 
 .colors .option:nth-child(5){
+  color: #ffffff;
+  border: 5px solid #f3da20;
+  border-radius: 30px;
   background-color: #050ded;
+}
+.colors .option:nth-child(5):hover{
+  color: rgb(240, 244, 9);
+  background: #e3f403;
+  transform: scale(1.8);
+  transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 .colors .option.selected::before{
@@ -126,7 +148,7 @@ section{
 }
 
 .colors .option:first-child.selected::before{
-  border-color: #ccc;
+  border-color: rgb(255, 255, 255);
 }
 
 .option #color-picker{
@@ -148,19 +170,26 @@ section{
 }
 
 .buttons .clear-canvas{
-  color: #6C757D;
-  border: 1px solid #6C757D;
-  transition: all 0.3s ease;
+  color: #ffffff;
+  border: 5px solid #838a90;
+  border-radius: 30px;
+  background-color: #d84433;
 }
 
 .clear-canvas:hover{
-  color: rgb(213, 56, 56);
-  background: #6C757D;
+  color: rgb(255, 255, 255);
+  background: #1dbe3a;
+  transform: scale(1.1);
+  transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+  
 }
 
 .drawing-board{
   flex: 1;
   overflow: hidden;
+  opacity: 90%;
+  width: 1500px;
+  height: 600px;
 }
 
 .drawing-board canvas{
